@@ -16,7 +16,7 @@ class chain:
 
         with open(log_file.name, "r") as input_file:
             input = input_file.readlines()
-            print(f"Input: {input}")
+            # print(f"Input: {input}")
 
         # print(input)
 
@@ -28,7 +28,9 @@ class chain:
             print(chunk, end="", flush=True)
             output += chunk
 
-        output_file = f"./milestones/{datetime}"
-        with open(output_file, "w+") as output_file:
+        output_file = f"./milestones/output_{datetime}"
+        with open(f"{output_file}.txt", "w+") as output_file:
             output_file.write(output)
+        
+        print("\n[+] Notes saved to this pc.")
 
