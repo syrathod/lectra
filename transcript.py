@@ -37,9 +37,19 @@ class transcriber:
                 
         print("[+] Log created gracefully.")
 
-        return log_file
+        f_counter = 0
 
-        # print(file_count)
+        for file_name in os.listdir(data_dir):
+            f_counter += 1
+
+            if f_counter > file_count-1:
+                break
+
+            else: 
+                file = os.path.join(data_dir, file_name)
+                os.remove(file)
+
+        return log_file
 
 
 

@@ -32,5 +32,5 @@ class chain:
         with open(f"{output_file}.txt", "w+") as output_file:
             output_file.write(output)
         
-        print("\n[+] Notes saved to this pc.")
+        print("\n\n[+] Notes saved to this pc.")
 
