@@ -1,0 +1,30 @@
+## Lecture Summary: Live Streaming & ML Integration
+
+This lecture covered two main aspects: live streaming architecture and the integration of an ML model for transcription.
+
+**Live Streaming:**
+
+* **Encoding & Transmission:** The stream is encoded on a dedicated server and sent to the backend via RTMB protocol. 
+* **Bitrate Management:** The encoded video is stored and segmented based on different bitrates (1, n, d, 7, 20). 
+* **Manifest Files:**  These files contain information about video segments and their location, enabling clients to access specific parts of the stream.
+* **HLS Protocol:** HTTP Live Streaming protocol is used to deliver the segmented video to clients, providing flexibility in bandwidth usage.
+
+**Cyber Depth Check & Bitrate Settings:**
+
+* A 5-second cyber depth check is employed for smooth streaming.
+* The bitrate is set at 1.2 Mbps with 25 frames per second, balancing computational load and bandwidth requirements.
+
+ **ML Integration:**
+
+* **WebSocket Chat:** Integrated a chat functionality using WebSocket for real-time communication.
+
+* **Model Architecture:**
+    *  Built the ML architecture using Lion's Head for basic building blocks and Multiflow for multi-earned design. 
+    *  The system utilizes a graph structure, with each node representing a distinct task.
+* **Transcription Model:**
+    * OpenAI's Whisper model is used for automatic speech recognition (ASR).
+    * Compared to Google, Microsoft, and other competitors, Whisper demonstrated strong performance based on available data.
+
+**Note:** This summary provides a concise overview of the lecture content. For a deeper understanding, it is recommended to refer to the original audio transcript. 
+
+

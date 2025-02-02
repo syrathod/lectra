@@ -1,0 +1,31 @@
+## Real-Time Video Service Lecture Summary:
+
+This lecture outlines a real-time video service architecture with key components and their functionalities.
+
+**I. Client Interaction:**
+
+* **Manifest File:** Clients first download a manifest file from the server, which specifies the location of video segments hosted on a Content Distribution Network (CDN).
+* **Video Segments:** The client then downloads these pre-segmented videos from the CDN for playback.
+
+**II. Audio Transcription & Summarization:**
+
+* **Audio Trunks Conversion:** Video segments are processed into audio trunks and sent to a job queue.
+* **Whisper Model:** A whisper model (an Automatic Speech Recognition system) is used to transcribe the audio trunks into text.
+* **Summarization Model:** The transcribed text is then fed into a summarization model, which generates concise summaries of the video content.
+
+**III. Caching & Efficiency:**
+
+* **Summary Caching:** Generated summaries are cached for quick retrieval by clients, eliminating the need to re-transcribe and summarize videos on each request.
+* **Job Queue:** A job queue manages the workflow, ensuring efficient processing of audio trunks by the Whisper model and subsequent summarization. 
+
+**IV. System Architecture:**
+
+The lecture emphasizes a robust system architecture with:
+
+*  Clear data flow between client, CDN, server, job queue, and models.
+* Efficient use of caching to optimize performance.
+* Modular design allowing for scalability and future updates.
+
+
+
+Let me know if you have any other questions!

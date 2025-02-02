@@ -28,7 +28,7 @@ class chain:
             print(chunk, end="", flush=True)
             output += chunk
 
-        output_file = f"./milestones/output_{datetime}"
+        output_file = f"./notes/output_{datetime}"
         with open(f"{output_file}.txt", "w+") as output_file:
             output_file.write(output)
         

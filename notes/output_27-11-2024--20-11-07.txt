@@ -1,0 +1,38 @@
+##  Lecture Summary: Building a Live Streaming Summarization Platform
+
+This lecture focuses on creating a platform that automatically generates summaries of live streaming lectures. Here's a breakdown of the key points:
+
+**Motivation:**
+
+* Existing solutions (e.g., YouTube summaries) are not tailored for small businesses like edutech companies needing lecture summaries for their students.
+* Directly querying an ML model for each lecture is expensive for these businesses.
+
+**Solution:**
+
+* A streaming platform that reduces the cost of ML queries by processing audio in chunks and generating summaries periodically.
+
+**System Flow:**
+
+1. **Audio Chunking:** 60-second audio chunks are downloaded continuously during a live stream, regardless of the platform (Zoom, Google Meet, etc.).
+2. **Transcription:** Each audio chunk is transcribed into text data.
+3. **Summarization:** A summary is generated for each transcript.
+4. **Scheduled Summarization:** Summaries are produced every 10 minutes based on the accumulated chunks.
+
+**Benefits:**
+
+* Automation of the entire process from audio capture to summarization.
+* Reduced cost by minimizing frequent ML query calls.
+* Provides summaries directly to students during live lectures.
+
+
+**Next Steps:**
+
+The lecture will likely delve deeper into the technical details of the system, including:
+
+* Specifics about the ML model used for summarization.
+* Data storage and management techniques.
+* User interface and interaction design.
+
+
+
+Let me know if you have any other questions!
